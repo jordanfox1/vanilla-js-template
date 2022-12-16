@@ -1,6 +1,5 @@
-import { showKeyboard } from "./tools/keyboard/keyboard"
-import { showDrums } from "./tools/drums/drums"
-import { showStudio } from "./tools/studio";
+import { showabout } from "./tools/about/about"
+import { showhome } from "./tools/home";
 
 let location = window.location.pathname;
 if (location.length == 0) {
@@ -8,17 +7,14 @@ if (location.length == 0) {
 }
 
 switch (location) {
-    case '/studio':
-        showStudio()
+    case '/home':
+        showhome()
         break;
-    case '/keyboard':
-        showKeyboard()
-        break;
-    case '/drums':
-        showDrums()
+    case '/about':
+        showabout()
         break;
     default:
-        showStudio()
+        showhome()
         break;
 }
 

@@ -15,22 +15,16 @@ const urlRoutes = {
         title: '',
         description: '',
     },
-    "/studio": {
-        template: "routing/pages/studio.html",
+    "/home": {
+        template: "routing/pages/home.html",
         title: '',
         javascript: '../../main.js',
         description: ''
     },
-    "/keyboard": {
-        template: "routing/pages/keyboard.html",
+    "/about": {
+        template: "routing/pages/about.html",
         title: '',
-        javascript: '../tools/keyboard/keyboard.js',
-        description: ''
-    },
-    "/drums": {
-        template: "routing/pages/drums.html",
-        title: '',
-        javascript: '../tools/drums/drums.js',
+        javascript: '../tools/about/about.js',
         description: ''
     },
 
