@@ -6,21 +6,20 @@
   <link rel="icon" type="image/svg+xml" href="favicon.svg"  />
   <link rel="stylesheet" href="style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Web Audio</title>
+  <title>Portfolio</title>
 </head>
 
 <body>
-  <div id="app">
-    <nav>
+  <div id="body">
+    <nav id="navbar">
       <a href="/home">home</a>
       <a href="/about">about</a>
     </nav>
-    <div id="content"></div>
+    <div id="content">
+      <script type="module" src="./routing/router.js"></script>
+      <script type="module" src="/main.js"></script>
+    </div>
   </div>
-<br><br>
-  <div id="piano"></div>
-  <script src="./routing/router.js"></script>
-  <script type="module" src="/main.js"></script>
 </body>
 
 </html>
