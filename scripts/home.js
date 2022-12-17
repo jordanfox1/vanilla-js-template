@@ -1,11 +1,11 @@
-import { showabout } from "./about/about"
+import { appendHtmlToBody, addElement } from "./helpers"
 
 export const showhome = async () => {
-    const header = document.createElement('h1')
-    header.innerHTML = "his element is added by the HOME script"
-    document.body.appendChild(header)
+    // globals 
+    const pageName = 'Home' 
 
-    const body = await fetch('../../routing/pages/home.html')
-    const response = await body.text()
-    document.getElementById("content").innerHTML = response
+
+    // set up page body
+    await appendHtmlToBody('../../routing/pages/home.html')
+    addElement({type: 'h1', text: `hello and welcome to the ${pageName} page --- from js`}, 'content');
 }
