@@ -30,11 +30,11 @@ const urlRoutes = {
 
 }
 
-const route = (event) => {
-    event = event || window.event
-    window.history.pushState({}, '', event.target.href)
-    urlLocationHandler()
-}
+// const route = (event) => {
+//     event = event || window.event
+//     window.history.pushState({}, '', event.target.href)
+//     urlLocationHandler()
+// }
 
 const urlLocationHandler = async () => {
 //     if (window.location.pathname.length == 0) {
