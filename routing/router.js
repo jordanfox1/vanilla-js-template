@@ -37,32 +37,31 @@ const route = (event) => {
 }
 
 const urlLocationHandler = async () => {
-    const location = window.location.pathname;
-    if (location.length == 0) {
-        location = '/'
-    }
-    const targetRoute = urlRoutes[location] || urlRoutes[404]
+//     if (window.location.pathname.length == 0) {
+//         const location = '/'
+//     } else {
+//         const location = window.location.pathname;
+//     }
+//     const targetRoute = urlRoutes[location] || urlRoutes[404]
 
-    // fetching our html
-    const html = await fetch(targetRoute.template)
-    const response = await html.text()
-    document.getElementById("content").innerHTML = response
+//     // fetching our html
+//     const html = await fetch(targetRoute.template)
+//     const response = await html.text()
+//     document.getElementById("content").innerHTML = response
 
-    // check for old script, if there place new script after it and delete
-    const oldScript = document.querySelector('script')
-    console.log(oldScript, '!!!!!!!!')
+//     // check for old script, if there place new script after it and delete
+//     const oldScript = document.querySelector('script')
 
-    if (oldScript) {
-        console.log(oldScript, '!!!!!!!!')
-        const newScript = document.createElement('script', {type: "module"})
-        const scriptSrc = targetRoute.javascript
+//     if (oldScript) {
+//         const newScript = document.createElement('script', { type: "module" })
+//         const scriptSrc = targetRoute.javascript
 
-        newScript.setAttribute('src', scriptSrc);
-        newScript.setAttribute('type', 'module');
-        oldScript.parentNode.insertBefore(newScript, oldScript.nextSibling)
-        oldScript.parentNode.removeChild(oldScript)
-    }
+//         newScript.setAttribute('src', scriptSrc);
+//         newScript.setAttribute('type', 'module');
+//         oldScript.parentNode.insertBefore(newScript, oldScript.nextSibling)
+//         oldScript.parentNode.removeChild(oldScript)
+//     }
 }
 
-window.onpopstate = urlLocationHandler
+// window.onpopstate = urlLocationHandler
 window.route = route
